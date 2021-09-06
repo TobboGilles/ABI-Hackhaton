@@ -39,9 +39,6 @@ contract Asset {
     require(status != STATUSES.SENT);
      
 
-         // accept
-         tvm.accept();
-
     // Update status to "SENT"
     status = STATUSES.SENT;
 
@@ -61,7 +58,6 @@ contract Asset {
     // Cannot be "CREATED" or "RECEIVED"
     require(status == STATUSES.SENT);
           
-        tvm.accept();
     
     // Update status to "RECEIVED"
        status = STATUSES.RECEIVED;
